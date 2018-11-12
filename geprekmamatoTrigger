@@ -1,0 +1,11 @@
+CREATE TRIGGER `item_gudang_in` AFTER INSERT ON `gudang_in`
+ FOR EACH ROW BEGIN
+UPDATE gudang SET stok=stok+NEW.jumlah
+WHERE kode_item = NEW.kode_item;
+END
+
+CREATE TRIGGER `item_gudang_out` AFTER INSERT ON `gudang_out`
+ FOR EACH ROW BEGIN
+UPDATE gudang SET stok=stok-NEW.jumlah
+WHERE kode_item = NEW.kode_item;
+END

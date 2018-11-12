@@ -1,0 +1,53 @@
+Database AGM
+
+Menu :
+ID Menu
+Nama Menu
+Harga
+ID Kategori Menu
+
+Kategori Menu :
+ID Kategori
+Nama Kategori
+
+Gudang :
+ID Item
+Kode Item
+Nama Item
+Satuan
+Stok
+
+Gudang IN
+ID Item IN
+ID Item
+Tanggal Beli
+Harga Beli
+Jumlah
+Keterangan
+
+Gudang OUT
+ID Gudang OUT
+ID Item
+Tanggal Keluar
+Jumlah
+Keterangan
+
+Promo :
+ID Promo
+Nama Promo
+Nilai Promo
+Keterangan
+
+Transaksi :
+ID Transaksi
+Tanggal Transaksi
+Waktu Transaksi
+No. Transaksi
+Nama Customer
+ID User
+ID Menu
+Qty
+ID Promo
+Total Bayar
+Dibayar
+Kembali

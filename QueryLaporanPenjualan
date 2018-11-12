@@ -1,0 +1,7 @@
+SELECT count(distinct no_transaksi) AS jumlah_transaksi, SUM(quantity) AS menu_terjual, SUM(total_bayar) AS omzet FROM transaksi
+
+SELECT tanggal_transaksi, count(distinct no_transaksi) AS jumlah_transaksi, SUM(quantity) AS menu_terjual, SUM(total_bayar) AS omzet FROM transaksi WHERE MONTH(Date) = 5 ORDER BY tanggal_transaksi DESC
+
+SELECT MAX(tanggal_transaksi), count(distinct no_transaksi) AS jumlah_transaksi, SUM(quantity) AS menu_terjual, SUM(total_bayar) AS omzet FROM transaksi WHERE MONTH(tanggal_transaksi)
+
+SELECT tanggal_transaksi, count(distinct no_transaksi) AS jumlah_transaksi, SUM(quantity) AS menu_terjual, SUM(total_bayar) AS omzet FROM transaksi WHERE MONTH(tanggal_transaksi)
