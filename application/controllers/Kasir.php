@@ -109,7 +109,29 @@ class Kasir extends CI_Controller {
   		'quantity' => $this->input->post('quantity'), 
   		'id_promo_transaksi' => $this->input->post('id_promo_transaksi'),
   		'total_bayar' => $this->input->post('total_bayar')
-		);
+		  );
+
+      $no_transaksiqr=$this->input->post('no_transaksiqr');
+
+      $this->load->library('ciqrcode'); //pemanggilan library QR CODE
+
+      $config['cacheable']  = true; //boolean, the default is true
+      $config['cachedir']   = './assets/'; //string, the default is application/cache/
+      $config['errorlog']   = './assets/'; //string, the default is application/logs/
+      $config['imagedir']   = './assets/qrtrans/'; //direktori penyimpanan qr code
+      $config['quality']    = true; //boolean, the default is true
+      $config['size']     = '1024'; //interger, the default is 1024
+      $config['black']    = array(224,255,255); // array, default is array(255,255,255)
+      $config['white']    = array(70,130,180); // array, default is array(0,0,0)
+      $this->ciqrcode->initialize($config);
+  
+      $image_name=$no_transaksiqr.'.png'; //buat name dari qr code sesuai dengan nim
+  
+      $params['data'] = "http://www.geprekmamato.com/transaksi/".$no_transaksiqr; //data yang akan di jadikan QR CODE
+      $params['level'] = 'H'; //H=High
+      $params['size'] = 10;
+      $params['savename'] = FCPATH.$config['imagedir'].$image_name; //simpan image QR CODE ke folder assets/images/
+      $this->ciqrcode->generate($params); // fungsi untuk generate QR CODE
 
         $result = $this->m_transaksi->insert($transaksi);
         echo json_decode($result);
@@ -117,53 +139,53 @@ class Kasir extends CI_Controller {
     /* Akhir Proses Transaksi */
 
     function menu() {
-		$data['menu'] = $this->m_menu->get_menu();
-		$this->template->load('kasir/v_kasir', 'kasir/v_tbl_menu', $data);
-	}
+      $data['menu'] = $this->m_menu->get_menu();
+      $this->template->load('kasir/v_kasir', 'kasir/v_tbl_menu', $data);
+    }
 
     function userkasir() {
-		$data['userkasir'] = $this->m_user->get_kasir();
-		$this->template->load('kasir/v_kasir', 'kasir/v_tbl_user_kasir',$data);
-	}
+		  $data['userkasir'] = $this->m_user->get_kasir();
+		  $this->template->load('kasir/v_kasir', 'kasir/v_tbl_user_kasir',$data);
+    }
 
-	function add_user_kasir() {
-		$this->template->load('kasir/v_kasir', 'kasir/v_add_userkasir');
-	}
+    function add_user_kasir() {
+    	$this->template->load('kasir/v_kasir', 'kasir/v_add_userkasir');
+    }
 
-	function save_user() {
+    function save_user() {
         $level= $this->input->post('level');
         $username= $this->input->post('username');
-        $password= md5($this->input->post('password'));
+        $password= password_hash($this->input->post('password'), PASSWORD_BCRYPT);
         $result= $this->m_user->insert($level,$username,$password);
         echo json_decode($result);
     }
 
     function edit_user($id) {
-		$where = array('id_user' => $id);
-		$data['user'] = $this->m_user->edit_data($where,'user')->result();
-		$this->template->load('kasir/v_kasir', 'kasir/v_edit_user', $data);
-	}
+      $where = array('id_user' => $id);
+      $data['user'] = $this->m_user->edit_data($where,'user')->result();
+      $this->template->load('kasir/v_kasir', 'kasir/v_edit_user', $data);
+    }
 
-	function update_user() {
-        $id_user= $this->input->post('id_user');
-        $level= $this->input->post('level');
-    	$username= $this->input->post('username');
-    	$password= md5($this->input->post('password'));
-		$data = array(
-			'level' => $level,
-			'username' => $username,
-			'password' => $password
-		);
-		$where = array(
-			'id_user' => $id_user
-		);
-		$result= $this->m_user->update($where,$data,'user');
-		echo json_decode($result);
-	}
+    function update_user() {
+      $id_user= $this->input->post('id_user');
+      $level= $this->input->post('level');
+      $username= $this->input->post('username');
+      $password= password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+      $data = array(
+        'level' => $level,
+        'username' => $username,
+        'password' => $password
+      );
+      $where = array(
+        'id_user' => $id_user
+      );
+      $result= $this->m_user->update($where,$data,'user');
+      echo json_decode($result);
+    }
 
-	function delete_kasir($id) {
-		$where = array('id_user' => $id);
-		$this->m_user->delete($where,'user');
-		redirect('kasir/userkasir');
-	}
+    function delete_kasir($id) {
+    	$where = array('id_user' => $id);
+    	$this->m_user->delete($where,'user');
+    	redirect('kasir/userkasir');
+    }
 }

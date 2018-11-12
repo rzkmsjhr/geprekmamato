@@ -173,11 +173,11 @@ class Gudang extends CI_Controller {
 	function save_user() {
         $level= $this->input->post('level');
         $username= $this->input->post('username');
-        $password= md5($this->input->post('password'));
+        $password= password_hash($this->input->post('password'), PASSWORD_BCRYPT);
         $result= $this->m_user->insert($level,$username,$password);
         echo json_decode($result);
     }
-
+    
 	function edit_user($id) {
 		$where = array('id_user' => $id);
 		$data['user'] = $this->m_user->edit_data($where,'user')->result();
@@ -188,7 +188,7 @@ class Gudang extends CI_Controller {
         $id_user= $this->input->post('id_user');
         $level= $this->input->post('level');
     	$username= $this->input->post('username');
-    	$password= md5($this->input->post('password'));
+    	$password= password_hash($this->input->post('password'), PASSWORD_BCRYPT);
 		$data = array(
 			'level' => $level,
 			'username' => $username,
