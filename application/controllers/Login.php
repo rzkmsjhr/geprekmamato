@@ -34,11 +34,17 @@ class Login extends CI_Controller {
 					$this->session->set_userdata('ses_nama',$data['username']);
 					redirect(base_url('kasir'));
             	}
-            	else {
+            	else if ($data['level']=='3') {
 					$this->session->set_userdata('akses','3');
 					$this->session->set_userdata('ses_id',$data['id_user']);
 					$this->session->set_userdata('ses_nama',$data['username']);
 					redirect(base_url('gudang'));
+            	}
+            	else {
+					$this->session->set_userdata('akses','4');
+					$this->session->set_userdata('ses_id',$data['id_user']);
+					$this->session->set_userdata('ses_nama',$data['username']);
+					redirect(base_url('homeadmin'));
         		}
         	}
 
