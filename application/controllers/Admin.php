@@ -32,6 +32,19 @@ class Admin extends CI_Controller {
 		$this->template->load('admin/v_admin', 'admin/v_transaksi_detail', $data);
 	}
 
+	function search_transaksi() {
+    	$keyword = $this->input->post('keyword');
+    	$header = $this->m_transaksi->search_transaksi_admin($keyword);
+	
+    	$hasil = $this->load->view('admin/v_transaksi', array('header'=>$header), true);
+    	
+    	$callback = array(
+    	  'hasil' => $hasil,
+    	);
+
+    	echo json_encode($callback);
+  	}
+
 	function add_transaksi() {
 		$data['makanan'] = $this->m_transaksi->get_menu_makanan();
 		$data['minuman'] = $this->m_transaksi->get_menu_minuman();

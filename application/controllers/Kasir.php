@@ -22,10 +22,10 @@ class Kasir extends CI_Controller {
 
 	/* Awal Proses Transaksi */
 	function transaksi() {
-		$data['header'] = $this->m_transaksi->get_transaksi_header_kasir();
-		$data['sale'] = $this->m_transaksi->get_transaksi_sale();
-		$this->template->load('kasir/v_kasir', 'kasir/v_tbl_transaksi', $data);
-	}
+    $data['header'] = $this->m_transaksi->get_transaksi_header_kasir();
+    $data['sale'] = $this->m_transaksi->get_transaksi_sale();
+    $this->template->load('kasir/v_kasir', 'kasir/v_tbl_transaksi', $data);
+  }
 
 	function transaksi_detail($id) {
 		$where = array('no_transaksi' => $id);
@@ -33,6 +33,19 @@ class Kasir extends CI_Controller {
 		$data['sale'] = $this->m_transaksi->detail_sale($id);
 		$this->template->load('kasir/v_kasir', 'kasir/v_transaksi_detail', $data);
 	}
+
+  function search_transaksi() {
+      $keyword = $this->input->post('keyword');
+      $header = $this->m_transaksi->search_transasksi_kasir($keyword);
+  
+      $hasil = $this->load->view('kasir/v_transaksi', array('header'=>$header), true);
+      
+      $callback = array(
+        'hasil' => $hasil,
+      );
+
+      echo json_encode($callback);
+    }
 
 	function add_transaksi() {
 		$data['makanan'] = $this->m_transaksi->get_menu_makanan();

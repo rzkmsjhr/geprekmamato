@@ -136,6 +136,124 @@ class M_transaksi extends CI_Model{
         return $query->result();
     }
 
+    function search_transaksi_admin($keyword) {
+        $this->db->select('transaksi.tanggal_transaksi,transaksi.waktu_transaksi,transaksi.no_transaksi,transaksi.nama_customer,user.username,promo.nama_promo')
+                 ->from('transaksi')
+                 ->join('user', 'transaksi.id_user_transaksi = user.id_user')
+                 ->join('promo', 'transaksi.id_promo_transaksi = promo.id_promo')
+                 ->like('no_transaksi', $keyword)
+                 ->or_like('nama_customer', $keyword)
+                 ->order_by('tanggal_transaksi', 'desc')
+                 ->order_by('waktu_transaksi', 'desc')
+                 ->group_by('no_transaksi');
+
+        $query = ("SELECT DISTINCT t.tanggal_transaksi, t.waktu_transaksi, t.no_transaksi, t.nama_customer, u.username, p.nama_promo FROM transaksi t JOIN user u ON t.id_user_transaksi = u.id_user JOIN promo p ON t.id_promo_transaksi = p.id_promo WHERE t.no_transaksi LIKE '$keyword%' OR t.nama_customer LIKE '$keyword%' ORDER BY t.tanggal_transaksi DESC, `t`.`waktu_transaksi` DESC");
+
+        $this->load->library('pagination');
+        
+        $config['base_url'] = base_url('admin/transaksi');
+        $config['total_rows'] = $this->db->query($query)->num_rows();
+        $config['per_page'] = 10;
+        $config['uri_segment'] = 3;
+        $config['num_links'] = 3;
+        
+        $config['full_tag_open']   = '<ul class="pagination pagination-sm m-t-xs m-b-xs">';
+        $config['full_tag_close']  = '</ul>';
+        
+        $config['first_link']      = 'First'; 
+        $config['first_tag_open']  = '<li>';
+        $config['first_tag_close'] = '</li>';
+        
+        $config['last_link']       = 'Last'; 
+        $config['last_tag_open']   = '<li>';
+        $config['last_tag_close']  = '</li>';
+        
+        $config['next_link']       = ' <i class="fa fa-arrow-right" aria-hidden="true"></i> '; 
+        $config['next_tag_open']   = '<li>';
+        $config['next_tag_close']  = '</li>';
+        
+        $config['prev_link']       = ' <i class="fa fa-arrow-left" aria-hidden="true"></i> '; 
+        $config['prev_tag_open']   = '<li>';
+        $config['prev_tag_close']  = '</li>';
+        
+        $config['cur_tag_open']    = '<li class="active"><a href="#">';
+        $config['cur_tag_close']   = '</a></li>';
+         
+        $config['num_tag_open']    = '<li>';
+        $config['num_tag_close']   = '</li>';
+    
+        $this->pagination->initialize($config);
+        
+        $page = ($this->uri->segment($config['uri_segment'])) ? $this->uri->segment($config['uri_segment']) : 0;
+        $query .= " LIMIT ".$page.", ".$config['per_page'];
+        
+        $data['limit'] = $config['per_page'];
+        $data['total_rows'] = $config['total_rows'];
+        $data['pagination'] = $this->pagination->create_links();
+        $data['transaksi'] = $this->db->get()->result();
+        
+        return $data; 
+    }
+
+    function search_transasksi_kasir($keyword) {
+        $this->db->select('transaksi.tanggal_transaksi,transaksi.waktu_transaksi,transaksi.no_transaksi,transaksi.nama_customer,user.username,promo.nama_promo')
+                 ->from('transaksi')
+                 ->join('user', 'transaksi.id_user_transaksi = user.id_user')
+                 ->join('promo', 'transaksi.id_promo_transaksi = promo.id_promo')
+                 ->like('no_transaksi', $keyword)
+                 ->or_like('nama_customer', $keyword)
+                 ->order_by('tanggal_transaksi', 'desc')
+                 ->order_by('waktu_transaksi', 'desc')
+                 ->group_by('no_transaksi');
+
+        $query = ("SELECT DISTINCT t.tanggal_transaksi, t.waktu_transaksi, t.no_transaksi, t.nama_customer, u.username, p.nama_promo FROM transaksi t JOIN user u ON t.id_user_transaksi = u.id_user JOIN promo p ON t.id_promo_transaksi = p.id_promo WHERE t.no_transaksi LIKE '$keyword%' OR t.nama_customer LIKE '$keyword%' ORDER BY t.tanggal_transaksi DESC, `t`.`waktu_transaksi` DESC");
+
+        $this->load->library('pagination');
+        
+        $config['base_url'] = base_url('kasir/transaksi');
+        $config['total_rows'] = $this->db->query($query)->num_rows();
+        $config['per_page'] = 10;
+        $config['uri_segment'] = 3;
+        $config['num_links'] = 3;
+        
+        $config['full_tag_open']   = '<ul class="pagination pagination-sm m-t-xs m-b-xs">';
+        $config['full_tag_close']  = '</ul>';
+        
+        $config['first_link']      = 'First'; 
+        $config['first_tag_open']  = '<li>';
+        $config['first_tag_close'] = '</li>';
+        
+        $config['last_link']       = 'Last'; 
+        $config['last_tag_open']   = '<li>';
+        $config['last_tag_close']  = '</li>';
+        
+        $config['next_link']       = ' <i class="fa fa-arrow-right" aria-hidden="true"></i> '; 
+        $config['next_tag_open']   = '<li>';
+        $config['next_tag_close']  = '</li>';
+        
+        $config['prev_link']       = ' <i class="fa fa-arrow-left" aria-hidden="true"></i> '; 
+        $config['prev_tag_open']   = '<li>';
+        $config['prev_tag_close']  = '</li>';
+        
+        $config['cur_tag_open']    = '<li class="active"><a href="#">';
+        $config['cur_tag_close']   = '</a></li>';
+         
+        $config['num_tag_open']    = '<li>';
+        $config['num_tag_close']   = '</li>';
+    
+        $this->pagination->initialize($config);
+        
+        $page = ($this->uri->segment($config['uri_segment'])) ? $this->uri->segment($config['uri_segment']) : 0;
+        $query .= " LIMIT ".$page.", ".$config['per_page'];
+        
+        $data['limit'] = $config['per_page'];
+        $data['total_rows'] = $config['total_rows'];
+        $data['pagination'] = $this->pagination->create_links();
+        $data['transaksi'] = $this->db->get()->result();
+        
+        return $data; 
+    }
+
     function insert($transaksi) {
         foreach($transaksi['id_menu_transaksi'] as $key => $id_menu_transaksi) {
           $dataToSave[] = array(
