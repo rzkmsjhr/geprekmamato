@@ -11,11 +11,11 @@
                         <label>Username</label>
                         <input type="hidden"name="id_user" value="<?php echo $row->id_user ?>">
                         <input type="hidden"name="level" value="<?php echo $row->level ?>">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="username" required="required" value="<?php echo $row->username ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="username" required value="<?php echo $row->username ?>">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password" id="password" value="<?php echo $row->password ?>">
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="password" value="<?php echo $row->password ?>" required minlength="6">
                     </div> 
                 </div>
             </div>

@@ -3,10 +3,9 @@
   <div class="header">
       <h3 class="title">Detail Transaksi</h3>
       <div class="col-md-3">
-      <img src="<?php echo base_url();?>/assets/qrtrans/<?php echo $row->no_transaksi ?>.png" height="200" width="200">
+      <img src="<?php echo base_url();?>/assets/qrtrans/<?php echo $row->no_transaksi ?>.png" class="img-responsive" height="200" width="200">
       </div>
-      <br>
-      <div class="col-md-6">
+      <div class="col-md-8">
       <p class="card-category">Tanggal Transaksi : <?php echo $row->tanggal_transaksi ?></p>
       <p class="card-category">Waktu Transaksi : <?php echo $row->waktu_transaksi ?></p>
       <p class="card-category">No Transaksi : <?php echo $row->no_transaksi ?></p>

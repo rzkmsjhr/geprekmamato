@@ -5,15 +5,8 @@ class Admin extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->load->model('m_kategori');
-		$this->load->model('m_menu');
-		$this->load->model('m_gudang');
-		$this->load->model('m_gudang_in');
-		$this->load->model('m_gudang_out');
-		$this->load->model('m_promo');
-		$this->load->model('m_user');
-		$this->load->model('m_transaksi');
-		$this->load->model('m_penjualan');
+		$this->load->model(array('m_kategori','m_menu','m_gudang','m_gudang_in','m_gudang_out','m_promo','m_user','m_transaksi','m_penjualan'));
+		$this->load->library('form_validation');
 		if($this->session->userdata('akses') != '1')
 		{
       		echo "Anda tidak berhak mengakses halaman ini";
@@ -55,8 +48,8 @@ class Admin extends CI_Controller {
     	
     	foreach($menu as $data){
     	  $list1 .= "<input type='hidden' name='id_menu_transaksi[]' class='form-control' placeholder='Harga' value='".$data->id_menu."'>
-    	  			 <input type='text' name='nama_menu[]' class='form-control' placeholder='Harga' value='".$data->nama_menu."'>";
-    	  $lists .= "<input type='text' name='harga_menu[]' class='form-control' placeholder='Harga' value='".$data->harga_menu."'>";
+    	  			 <input type='text' readonly name='nama_menu[]' class='form-control' placeholder='Harga' value='".$data->nama_menu."'>";
+    	  $lists .= "<input type='text' readonly name='harga_menu[]' class='form-control' placeholder='Harga' value='".$data->harga_menu."'>";
     	}
     	
     	$callback = array('list_menu'=>$lists,'list_nama'=>$list1);
@@ -118,25 +111,25 @@ class Admin extends CI_Controller {
 
 		$no_transaksiqr=$this->input->post('no_transaksiqr');
 
-  		$this->load->library('ciqrcode'); //pemanggilan library QR CODE
+  		$this->load->library('ciqrcode');
 
-		$config['cacheable']	= true; //boolean, the default is true
-		$config['cachedir']		= './assets/'; //string, the default is application/cache/
-		$config['errorlog']		= './assets/'; //string, the default is application/logs/
-		$config['imagedir']		= './assets/qrtrans/'; //direktori penyimpanan qr code
-		$config['quality']		= true; //boolean, the default is true
-		$config['size']			= '1024'; //interger, the default is 1024
-		$config['black']		= array(224,255,255); // array, default is array(255,255,255)
-		$config['white']		= array(70,130,180); // array, default is array(0,0,0)
+		$config['cacheable']	= true;
+		$config['cachedir']		= './assets/';
+		$config['errorlog']		= './assets/';
+		$config['imagedir']		= './assets/qrtrans/';
+		$config['quality']		= true;
+		$config['size']			= '1024';
+		$config['black']		= array(224,255,255);
+		$config['white']		= array(70,130,180);
 		$this->ciqrcode->initialize($config);
 
-		$image_name=$no_transaksiqr.'.png'; //buat name dari qr code sesuai dengan nim
+		$image_name=$no_transaksiqr.'.png';
 
-		$params['data'] = "http://www.geprekmamato.com/transaksi/".$no_transaksiqr; //data yang akan di jadikan QR CODE
-		$params['level'] = 'H'; //H=High
+		$params['data'] = "http://www.geprekmamato.com/transaksi/".$no_transaksiqr;
+		$params['level'] = 'H';
 		$params['size'] = 10;
-		$params['savename'] = FCPATH.$config['imagedir'].$image_name; //simpan image QR CODE ke folder assets/images/
-		$this->ciqrcode->generate($params); // fungsi untuk generate QR CODE
+		$params['savename'] = FCPATH.$config['imagedir'].$image_name;
+		$this->ciqrcode->generate($params);
 
         $result = $this->m_transaksi->insert($transaksi);
         echo json_decode($result);

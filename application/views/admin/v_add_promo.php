@@ -8,11 +8,11 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Nama Promo</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="nama_promo" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="nama_promo" required>
                     </div>
                     <div class="form-group">
                         <label>Nilai Promo</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

@@ -8,7 +8,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Pilih Bahan Masakan</label>
-                        <select required="required" name="kode_item" class="form-control">
+                        <select required name="kode_item" class="form-control">
                               <?php 
                               foreach($bahanmasak as $row)
                               { 
@@ -19,15 +19,15 @@
                     </div>
                     <div class="form-group">
                         <label>Tanggal Keluar</label>
-                        <input id="tanggal-beli" type="text" class="form-control" placeholder="Masukkan Tanggal Beli" name="tanggal_keluar" required="required">
+                        <input id="tanggal-beli" type="text" class="form-control" placeholder="Masukkan Tanggal Beli" name="tanggal_keluar" required>
                     </div>
                     <div class="form-group">
                         <label>Jumlah Keluar</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea required="required" name="keterangan" class="form-control"></textarea>
+                        <textarea required name="keterangan" class="form-control"></textarea>
                     </div>
                 </div>
             </div>

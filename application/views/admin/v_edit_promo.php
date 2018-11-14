@@ -10,15 +10,15 @@
                     <div class="form-group">
                         <label>Nama Promo</label>
                         <input type="hidden"name="id_promo" value="<?php echo $row->id_promo ?>">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="nama_promo" required="required" value="<?php echo $row->nama_promo ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="nama_promo" required value="<?php echo $row->nama_promo ?>">
                     </div>
                     <div class="form-group">
                         <label>Nilai Promo</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required="required" value="<?php echo $row->nilai_promo ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required value="<?php echo $row->nilai_promo ?>">
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea required="required" name="keterangan" class="form-control"><?php echo $row->keterangan ?></textarea>
+                        <textarea required name="keterangan" class="form-control"><?php echo $row->keterangan ?></textarea>
                     </div>
                 </div>
             </div>

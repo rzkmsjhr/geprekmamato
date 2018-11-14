@@ -11,15 +11,15 @@
                         <label>Nama Kategori</label>
                         <input type="hidden"name="id_item" value="<?php echo $row->id_item ?>">
                         <input type="hidden"name="kode_item" value="<?php echo $row->kode_item ?>">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Item" name="nama_item" required="required" value="<?php echo $row->nama_item ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Item" name="nama_item" required value="<?php echo $row->nama_item ?>">
                     </div>
                     <div class="form-group">
                         <label>Satuan</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Satuan" name="satuan" required="required" value="<?php echo $row->satuan ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Satuan" name="satuan" required value="<?php echo $row->satuan ?>">
                     </div>
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Stok" name="stok" required="required" value="<?php echo $row->stok ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Stok" name="stok" required value="<?php echo $row->stok ?>">
                     </div>
                 </div>
             </div>

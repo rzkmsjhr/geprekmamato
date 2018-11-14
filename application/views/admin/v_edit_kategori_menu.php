@@ -10,7 +10,7 @@
                     <div class="form-group">
                         <label>Nama Kategori</label>
                         <input type="hidden"name="id_kategori" value="<?php echo $row->id_kategori ?>">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="nama_kategori" required="required" value="<?php echo $row->nama_kategori ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="nama_kategori" required value="<?php echo $row->nama_kategori ?>">
                     </div>
                 </div>
             </div>

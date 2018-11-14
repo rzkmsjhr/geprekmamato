@@ -37,7 +37,7 @@
                 <div class="col-md-4 px-1">
                     <div class="form-group">
                         <label>Nama Customer</label>
-                        <input name="nama_customer" type="text" class="form-control" placeholder="Nama Customer" required="required">
+                        <input name="nama_customer" type="text" class="form-control" placeholder="Nama Customer" required>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Pilih Menu</label>
-                        <select required="required" name="id_menu_transaksi" class="form-control" id="menu">
+                        <select required name="id_menu_transaksi" class="form-control" id="menu">
                         <option value="">- Pilih Menu -</option>
                         <option disabled>──────────</option>
                         <option disabled>- MAKANAN -</option>
@@ -101,7 +101,7 @@
                     <div class="col-md-3 px-1">
                         <div class="form-group">
                             <label>Jumlah</label>
-                            <input name="quantity[]" type="text" class="form-control" placeholder="Jumlah" value="" required="required">
+                            <input name="quantity[]" type="text" class="form-control" placeholder="Jumlah" value="" required>
                         </div>
                     </div>
                     <div class="col-md-2 pl-1">
@@ -116,7 +116,7 @@
                     <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Pilih Promo</label>
-                        <select required="required" name="id_promo_transaksi" class="form-control" id="promo">
+                        <select required name="id_promo_transaksi" class="form-control" id="promo">
                         <option value="">- Pilih Promo -</option>
                         <?php 
                             foreach($promo as $row)

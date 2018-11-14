@@ -8,7 +8,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Nama Kategori</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="nama_kategori" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="nama_kategori" required>
                     </div>
                 </div>
             </div>

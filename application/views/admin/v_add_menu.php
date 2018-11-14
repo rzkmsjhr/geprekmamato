@@ -8,11 +8,11 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Nama Menu</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Menu" name="nama_menu" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Menu" name="nama_menu" required>
                     </div>
                     <div class="form-group">
                         <label>Harga</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required>
                     </div>
                     <div class="form-group">
                         <label>Kategori</label>

@@ -10,15 +10,15 @@
                     <div class="form-group">
                         <label>Nama Menu</label>
                         <input type="hidden" name="id_menu" value="<?php echo $row->id_menu ?>">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Menu" name="nama_menu" required="required" value="<?php echo $row->nama_menu ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Menu" name="nama_menu" required value="<?php echo $row->nama_menu ?>">
                     </div>
                     <div class="form-group">
                         <label>Harga</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required="required" value="<?php echo $row->harga_menu ?>">
+                        <input type="text" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required value="<?php echo $row->harga_menu ?>">
                     </div>
                     <div class="form-group">
                         <label>Kategori</label>
-                        <select required="required" name="id_kategori_menu" class="form-control">
+                        <select required name="id_kategori_menu" class="form-control">
                             <?php foreach ($kategori as $cat) { ?>
                             <option 
                             <?php if($cat->id_kategori == $row->id_kategori_menu){ echo 'selected="selected"'; } ?> value="<?php echo $cat->id_kategori ?>">

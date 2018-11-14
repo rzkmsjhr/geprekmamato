@@ -8,7 +8,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Pilih Bahan Masakan</label>
-                        <select required="required" name="kode_item" class="form-control">
+                        <select required name="kode_item" class="form-control">
                               <?php 
                               foreach($bahanmasak as $row)
                               { 
@@ -19,19 +19,19 @@
                     </div>
                     <div class="form-group">
                         <label>Tanggal Beli</label>
-                        <input id="tanggal-beli" type="text" class="form-control" placeholder="Masukkan Tanggal Beli" name="tanggal_beli" required="required">
+                        <input id="tanggal-beli" type="text" class="form-control" placeholder="Masukkan Tanggal Beli" name="tanggal_beli" required>
                     </div>
                     <div class="form-group">
                         <label>Harga Beli</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Harga Beli" name="harga_beli" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Harga Beli" name="harga_beli" required>
                     </div>
                     <div class="form-group">
                         <label>Jumlah Masuk</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>
-                        <textarea required="required" name="keterangan" class="form-control"></textarea>
+                        <textarea required name="keterangan" class="form-control"></textarea>
                     </div>
                 </div>
             </div>

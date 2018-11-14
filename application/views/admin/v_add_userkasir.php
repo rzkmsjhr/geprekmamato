@@ -9,12 +9,11 @@
                     <div class="form-group">
                         <label>Username</label>
                         <input type="hidden"name="level" value="2">
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="username" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Promo" name="username" required>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password" id="password">
-                        
+                        <input type="password" class="form-control" name="password" placeholder="Password" id="password" required minlength="6">
                     </div>
                 </div>
             </div>

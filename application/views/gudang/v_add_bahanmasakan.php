@@ -9,19 +9,19 @@
                     <div class="form-group">
                         <label>Kode Bahan</label>
                         <input class="form-control" readonly="readonly" type="text" name="kode_item1" value="BHN">
-                        <input type="text" class="form-control" placeholder="Masukkan Kode Item" name="kode_item2" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Kode Item" name="kode_item2" required>
                     </div>
                     <div class="form-group">
                         <label>Nama Bahan</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Item" name="nama_item" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Nama Item" name="nama_item" required>
                     </div>
                     <div class="form-group">
                         <label>Satuan</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Satuan" name="satuan" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Satuan" name="satuan" required>
                     </div>
                     <div class="form-group">
                         <label>Stok</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Stok" name="stok" required="required">
+                        <input type="text" class="form-control" placeholder="Masukkan Stok" name="stok" required>
                     </div>
                 </div>
             </div>

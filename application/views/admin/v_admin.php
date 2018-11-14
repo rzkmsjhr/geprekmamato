@@ -128,7 +128,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-8 col-md-12">
                     <h2>Hai, <?php echo $this->session->userdata("ses_nama"); ?></h2>
                     <?php echo $contents; ?>
                     </div>
