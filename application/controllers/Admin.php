@@ -148,10 +148,14 @@ class Admin extends CI_Controller {
         echo json_decode($result);
     }
 
-    function delete_transaksi($id) {
-		$where = array('no_transaksi' => $id);
-		unlink("assets/qrtrans/".$id.".png");
-		$this->m_transaksi->delete($where,'transaksi');
+    function delete_transaksi() {
+    	$id = $this->input->post('no_transaksi');
+    	for ($i = 0; $i < sizeof($id); $i++) {
+        	print_r($id[$i]);
+        	$where = "no_transaksi = '$id[$i]'";
+        	unlink("assets/qrtrans/".$id[$i].".png");
+        	$this->m_transaksi->delete($where,'transaksi');
+		}
 		redirect('admin/transaksi');
 	}
     /* Akhir Proses Transaksi */

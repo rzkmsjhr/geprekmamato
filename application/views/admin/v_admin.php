@@ -162,7 +162,14 @@
         document.body.innerHTML = originalContents;
         }
     </script>
-    
+    <script type="text/javascript">
+    function toggle(source) {
+    checkboxes = document.getElementsByName('no_transaksi[]');
+    for(var i=0, n=checkboxes.length;i<n;i++) {
+    checkboxes[i].checked = source.checked;
+    }
+    }
+    </script>
     <script type="text/javascript">
     jQuery(document).ready(function() {
     //$(".add-more").load(location.href + ".add-more");''
@@ -176,7 +183,6 @@
       });
       });
     </script>
-
     <script type="text/javascript">
     $(document).ready(function(){ 
       $("#menu").change(function(){
@@ -201,7 +207,6 @@
       });
     });
     </script>
-
     <script type="text/javascript">
     $(document).ready(function(){ 
       $("#promo").change(function(){
@@ -225,7 +230,6 @@
       });
     });
     </script>
-
     <script type="text/javascript">
       jQuery(document).ready(function(){
       // Show password Button
@@ -242,13 +246,11 @@
       });
     });
     </script>
-
     <script>
     $( function() {
       var date = $('#tanggal-beli').datepicker({ dateFormat: 'yy-mm-dd' }).val();
     } );
     </script>
-
     <script type="text/javascript">
     $(document).ready(function(){
       $("#btn-search").click(function(){ 
@@ -267,6 +269,11 @@
           success: function(response){ 
             $("#btn-search").html("SEARCH").removeAttr("disabled");
             $("#view").html(response.hasil);
+             if(response.hasil == true){ // if true (1)
+              setTimeout(function(){// wait for 5 secs(2)
+              location.reload(); // then reload the page.(3)
+              }, 1000); 
+             }
           },
           error: function (xhr, ajaxOptions, thrownError) { 
             alert(xhr.responseText); 
@@ -275,7 +282,6 @@
       });
     });
     </script>
-
     <script type="text/javascript">
     $(document).ready(function(){
     $('#submit-transaksi').submit(function(e){
@@ -298,7 +304,6 @@
         });
     });
     </script>
-
     <script type="text/javascript">
     $(document).ready(function(){
     $('#submit-kategori').submit(function(e){
