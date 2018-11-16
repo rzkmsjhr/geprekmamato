@@ -21,7 +21,8 @@
                     <td><?php echo $newDate ?></td>
                     <td><?php echo $row->jumlah_transaksi ?></td>
                     <td><?php echo $row->menu_terjual ?></td>
-                    <td><?php echo $row->omzet ?></td>
+                    <td><?php $harga=number_format($row->omzet,0,",",".");
+                    echo "Rp. ".$harga; ?></td>
                 <!--<td>
                 <a href="<?php echo base_url();?>admin/edit/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Update" class="fa fa-edit"></i></a>
                 <a href="<?php echo base_url();?>admin/delete/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Delete" class="fa fa-times"></i></a>
@@ -56,7 +57,8 @@
                     <td><?php echo $newDate ?></td>
                     <td><?php echo $row->jumlah_transaksi ?></td>
                     <td><?php echo $row->menu_terjual ?></td>
-                    <td><?php echo $row->omzet ?></td>
+                    <td><?php $harga=number_format($row->omzet,0,",",".");
+                    echo "Rp. ".$harga; ?></td>
                 <!--<td>
                 <a href="<?php echo base_url();?>admin/edit/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Update" class="fa fa-edit"></i></a>
                 <a href="<?php echo base_url();?>admin/delete/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Delete" class="fa fa-times"></i></a>
@@ -91,7 +93,8 @@
                   <td><?php echo $row->bulan ?></td>
                   <td><?php echo $row->jumlah_transaksi ?></td>
                   <td><?php echo $row->menu_terjual ?></td>
-                  <td><?php echo $row->omzet ?></td>
+                  <td><?php $harga=number_format($row->omzet,0,",",".");
+                    echo "Rp. ".$harga; ?></td>
               <!--<td>
               <a href="<?php echo base_url();?>admin/edit/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Update" class="fa fa-edit"></i></a>
               <a href="<?php echo base_url();?>admin/delete/<?php echo $row->CourseID; ?>"><i rel="tooltip" title="Delete" class="fa fa-times"></i></a>

@@ -11,12 +11,14 @@
               <th>Action</th>
           </thead>
           <tbody>
-              <?php 
+              <?php
                   foreach($menu as $row)
                   { ?>
                     <tr>
                     <td><?php echo $row->nama_menu ?></td>
-                    <td><?php echo $row->harga_menu ?></td>
+                    <td><?php
+                    $harga=number_format($row->harga_menu,0,",",".");
+                    echo "Rp. ".$harga; ?></td>
                     <td><?php echo $row->nama_kategori ?></td>
                     <td>
                     <a href="<?php echo base_url();?>admin/edit_menu/<?php echo $row->id_menu; ?>"><i rel="tooltip" title="Update" class="fa fa-edit"></i></a>
