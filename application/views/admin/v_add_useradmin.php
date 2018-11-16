@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifuser" style="display:none">
+    <span><b>Data User Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input User Admin</h4>

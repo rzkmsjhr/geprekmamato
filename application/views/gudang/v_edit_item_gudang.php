@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifupdategudang" style="display:none">
+    <span><b>Update Item Gudang Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Update Item Gudang</h4>

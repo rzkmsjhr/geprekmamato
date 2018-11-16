@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notiftransaksi" style="display:none">
+    <span><b>Transaksi Berhasil Disimpan</span>
+</div>
 <div class="card">
   <div class="header">
       <h3 class="title">Cetak Nota</h3>

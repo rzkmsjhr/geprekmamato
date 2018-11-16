@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifupdatemenu" style="display:none">
+    <span><b>Menu Berhasil Di Update</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Update Menu</h4>

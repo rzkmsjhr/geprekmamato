@@ -235,7 +235,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Transaksi Sudah Disimpan");
+                    $("#notiftransaksi").fadeIn('slow');
+                    setTimeout(function() { $("#notiftransaksi").hide(); }, 3000);
                },
                   error: function (xhr, ajaxOptions, thrownError) {
                       alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
@@ -257,7 +258,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Insert User Sukses");
+                  $("#notifuser").fadeIn('slow');
+                  setTimeout(function() { $("#notifuser").hide(); }, 3000);
                }
             });
         });
@@ -276,7 +278,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Update User Sukses");
+                    $("#notifupdateuser").fadeIn('slow');
+                    setTimeout(function() { $("#notifupdateuser").hide(); }, 3000);
                }
             });
         });

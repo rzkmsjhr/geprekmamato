@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifupdateuser" style="display:none">
+    <span><b>Kasir Berhasil Di Update</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Update User</h4>

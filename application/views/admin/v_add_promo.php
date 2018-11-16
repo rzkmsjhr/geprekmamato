@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifpromo" style="display:none">
+    <span><b>Promo Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Promo</h4>
@@ -12,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         <label>Nilai Promo</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required>
+                        <input type="number" class="form-control" placeholder="Masukkan Nilai promo" name="nilai_promo" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

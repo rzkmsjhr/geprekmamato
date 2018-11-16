@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifitemout" style="display:none">
+    <span><b>Item Keluar Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Bahan Masakan Keluar</h4>
@@ -23,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label>Jumlah Keluar</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
+                        <input type="number" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

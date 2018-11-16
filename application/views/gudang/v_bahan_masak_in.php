@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifitemin" style="display:none">
+    <span><b>Item Masuk Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Bahan Masakan Masuk</h4>
@@ -23,11 +26,11 @@
                     </div>
                     <div class="form-group">
                         <label>Harga Beli</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Harga Beli" name="harga_beli" required>
+                        <input type="number" class="form-control" placeholder="Masukkan Harga Beli" name="harga_beli" required>
                     </div>
                     <div class="form-group">
                         <label>Jumlah Masuk</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
+                        <input type="number" class="form-control" placeholder="Masukkan Nama Kategori" name="jumlah" required>
                     </div>
                     <div class="form-group">
                         <label>Keterangan</label>

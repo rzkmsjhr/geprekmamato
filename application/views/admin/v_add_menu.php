@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifmenu" style="display:none">
+    <span><b>Menu Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Menu</h4>
@@ -12,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         <label>Harga</label>
-                        <input type="text" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required>
+                        <input type="number" class="form-control" placeholder="Masukkan Harga" name="harga_menu" required>
                     </div>
                     <div class="form-group">
                         <label>Kategori</label>

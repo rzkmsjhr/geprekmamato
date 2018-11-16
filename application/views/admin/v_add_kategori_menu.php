@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifkategori" style="display:none">
+    <span><b>Kategori Menu Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Kategori Menu</h4>
@@ -8,6 +11,7 @@
                 <div class="col-md-5">
                     <div class="form-group">
                         <label>Nama Kategori</label>
+                       
                         <input type="text" class="form-control" placeholder="Masukkan Nama Kategori" name="nama_kategori" required>
                     </div>
                 </div>

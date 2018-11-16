@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifgudang" style="display:none">
+    <span><b>Data Gudang Berhasil Disimpan</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Input Bahan Masakan</h4>

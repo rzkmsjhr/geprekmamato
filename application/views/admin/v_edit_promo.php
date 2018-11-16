@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifupdatepromo" style="display:none">
+    <span><b>Promo Berhasil Di Update</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Update Promo</h4>

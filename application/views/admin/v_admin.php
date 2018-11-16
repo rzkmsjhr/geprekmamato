@@ -16,7 +16,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
 </head>
 <body>
 
@@ -295,7 +294,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Transaksi Sudah Disimpan");
+                    $("#notiftransaksi").fadeIn('slow');
+                    setTimeout(function() { $("#notiftransaksi").hide(); }, 3000);
                },
                   error: function (xhr, ajaxOptions, thrownError) {
                       alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
@@ -317,7 +317,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Kategori Sudah Disimpan");
+                      $("#notifkategori").fadeIn('slow');
+                      setTimeout(function() { $("#notifkategori").hide(); }, 3000);
                }
              });
         });
@@ -336,7 +337,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Update Kategori Sukses");
+                      $("#notifupdatekategori").fadeIn('slow');
+                      setTimeout(function() { $("#notifupdatekategori").hide(); }, 3000);
                }
             });
         });
@@ -355,7 +357,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Menu Sudah Disimpan");
+                      $("#notifmenu").fadeIn('slow');
+                      setTimeout(function() { $("#notifmenu").hide(); }, 3000);
                }
              });
         });
@@ -374,7 +377,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Update Menu Sukses");
+                      $("#notifupdatemenu").fadeIn('slow');
+                      setTimeout(function() { $("#notifupdatemenu").hide(); }, 3000);
                }
             });
         });
@@ -393,7 +397,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Item Sukses di Input");
+                      $("#notifgudang").fadeIn('slow');
+                      setTimeout(function() { $("#notifgudang").hide(); }, 3000);
                }
             });
         });
@@ -412,7 +417,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Item Sukses di Update");
+                      $("#notifupdategudang").fadeIn('slow');
+                      setTimeout(function() { $("#notifupdategudang").hide(); }, 3000);
                }
             });
         });
@@ -431,7 +437,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Item Masuk Sukses di Update");
+                      $("#notifitemin").fadeIn('slow');
+                      setTimeout(function() { $("#notifitemin").hide(); }, 3000);
                }
             });
         });
@@ -450,7 +457,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Item Keluar Sukses di Update");
+                      $("#notifitemout").fadeIn('slow');
+                      setTimeout(function() { $("#notifitemout").hide(); }, 3000);
                }
             });
         });
@@ -488,7 +496,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Input Data Promo Sukses");
+                    $("#notifpromo").fadeIn('slow');
+                    setTimeout(function() { $("#notifpromo").hide(); }, 3000);
                }
             });
         });
@@ -507,7 +516,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Update Data Promo Sukses");
+                    $("#notifupdatepromo").fadeIn('slow');
+                    setTimeout(function() { $("#notifupdatepromo").hide(); }, 3000);
                }
             });
         });
@@ -526,7 +536,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Insert User Sukses");
+                    $("#notifuser").fadeIn('slow');
+                    setTimeout(function() { $("#notifuser").hide(); }, 3000);
                },
           error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
@@ -548,7 +559,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Update User Sukses");
+                    $("#notifupdateuser").fadeIn('slow');
+                    setTimeout(function() { $("#notifupdateuser").hide(); }, 3000);
                }
             });
         });

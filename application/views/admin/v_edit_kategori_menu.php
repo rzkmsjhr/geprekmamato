@@ -1,3 +1,6 @@
+<div class="alert alert-success" id="notifupdatekategori" style="display:none">
+    <span><b>Kategori Menu Berhasil Di Update</span>
+</div>
 <div class="card">
     <div class="header">
         <h4 class="title">Update Kategori Menu</h4>

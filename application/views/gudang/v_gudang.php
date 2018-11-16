@@ -156,7 +156,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Item Sukses di Input");
+                      $("#notifgudang").fadeIn('slow');
+                      setTimeout(function() { $("#notifgudang").hide(); }, 3000);
                }
             });
         });
@@ -176,7 +177,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Item Sukses di Update");
+                      $("#notifupdategudang").fadeIn('slow');
+                      setTimeout(function() { $("#notifupdategudang").hide(); }, 3000);
                }
             });
         });
@@ -196,7 +198,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Item Masuk Sukses di Update");
+                      $("#notifitemin").fadeIn('slow');
+                      setTimeout(function() { $("#notifitemin").hide(); }, 3000);
                }
             });
         });
@@ -216,7 +219,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      alert("Data Item Keluar Sukses di Update");
+                      $("#notifitemout").fadeIn('slow');
+                      setTimeout(function() { $("#notifitemout").hide(); }, 3000);
                }
             });
         });
@@ -236,7 +240,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Insert User Sukses");
+                    $("#notifuser").fadeIn('slow');
+                    setTimeout(function() { $("#notifuser").hide(); }, 3000);
                }
             });
         });
@@ -256,7 +261,8 @@
                 cache:false,
                 async:false,
                  success: function(data){
-                    alert("Update User Sukses");
+                    $("#notifupdateuser").fadeIn('slow');
+                    setTimeout(function() { $("#notifupdateuser").hide(); }, 3000);
                }
             });
         });
