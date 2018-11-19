@@ -3,11 +3,11 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-6 home-about-left">
-              <h1>About Our Story</h1>
+              <h1>Tentang - Ayam Geprek Mamato</h1>
               <p>
-                Who are in extremely love with eco friendly system. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Dibuka sejak Juli - 2018, Ayam Geprek Mamato menyajikan olahan ayam dengan resep khas turun-temurun. Ayam ungkep yang digeprek bersama dengan sambal pedas khas #mamato tentunya akan membuat siapapun yang mencicipinya ketagihan. Yummy!
               </p>
-              <a href="#" class="primary-btn">view full menu</a>
+              <a href="#" class="primary-btn">Lihat Menu Lengkap</a>
             </div>
             <div class="col-lg-6 home-about-right">
               <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/about-img.jpg" alt="">
@@ -18,100 +18,187 @@
       <!-- End home-about Area -->      
 
       <!-- Start menu-area Area -->
-            <section class="menu-area section-gap" id="menu">
-                <div class="container">
+      <section class="menu-area section-gap" id="menu">
+      <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="menu-content pb-70 col-lg-8">
               <div class="title text-center">
-                <h1 class="mb-10">What kind of Foods we serve for you</h1>
-                <p>Who are in extremely love with eco friendly system.</p>
+                <h1 class="mb-10">Pilihan Menu Ayam Geprek Mamato</h1>
+                <p>Berbabagai macam menu dengan harga murah dengan kualitas bahan yang baik dan juga segar</p>
               </div>
             </div>
           </div>  
 
-                    <ul class="filter-wrap filters col-lg-12 no-padding">
-                        <li class="active" data-filter="*">All Menu</li>
-                        <li data-filter=".breakfast">Breakfast</li>
-                        <li data-filter=".lunch">Lunch</li>
-                        <li data-filter=".dinner">Dinner</li>
-                        <li data-filter=".budget-meal">Budget Meal</li>
-                        <li data-filter=".buffet">Buffet</li>
-                    </ul>
+          <ul class="filter-wrap filters col-lg-12 no-padding">
+              <li class="active" data-filter="*">Semua Menu</li>
+              <li data-filter=".makanan">Makanan</li>
+              <li data-filter=".minuman">Minuman</li>
+              <li data-filter=".snack">Snack</li>
+              <li data-filter=".paket-hemat">Paket Hemat</li>
+              <li data-filter=".ala-carte">Ala Carte</li>
+          </ul>
                     
-                    <div class="filters-content">
-                        <div class="row grid">
-                            <div class="col-md-6 all breakfast">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Cappuccion</h4>
-                    <h4 class="price">$49</h4>
-                  </div>      
+        <div class="filters-content">
+          <div class="row grid">
+            <div class="col-md-6 all makanan">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Nasi + Ayam Geprek</h4>
+                  <h4 class="price">Rp. 12.000</h4>
+                </div>      
                   <p>
                     Usage of the Internet is becoming more common due to rapid advance.
                   </p>                  
-                </div>                                         
-                            </div>                           
-                            <div class="col-md-6 all dinner">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Americano</h4>
-                    <h4 class="price">$49</h4>
-                  </div>      
+              </div>                                         
+            </div>                           
+            <div class="col-md-6 all makanan">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Nasi Uduk + Ayam Geprek</h4>
+                  <h4 class="price">Rp. 14.000</h4>
+                </div>      
                   <p>
                     Usage of the Internet is becoming more common due to rapid advance.
                   </p>                  
-                </div>
-                            </div>
-                            <div class="col-md-6 all budget-meal">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Macchiato</h4>
-                    <h4 class="price">$49</h4>
-                  </div>      
+              </div>
+            </div>
+            <div class="col-md-6 all makanan">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Indomie + Ayam Geprek</h4>
+                  <h4 class="price">Rp. 15.000</h4>
+                </div>      
                   <p>
                     Usage of the Internet is becoming more common due to rapid advance.
                   </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all makanan">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Nasi Goreng Kari + Ayam Geprek</h4>
+                  <h4 class="price">Rp. 16.000</h4>
                 </div>
-                            </div>
-                            <div class="col-md-6 all breakfast">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Mocha</h4>
-                    <h4 class="price">$49</h4>
-                  </div>
-                  <p>
-                    Usage of the Internet is becoming more common due to rapid advance.
-                  </p>                  
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all makanan ala-carte">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Ayam Geprek</h4>
+                  <h4 class="price">Rp. 10.000</h4>
                 </div>
-                            </div>
-                            <div class="col-md-6 all lunch">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Piccolo Latte</h4>
-                    <h4 class="price">$49</h4>
-                  </div>
-                  <p>
-                    Usage of the Internet is becoming more common due to rapid advance.
-                  </p>                  
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all makanan ala-carte">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Nasi Putih</h4>
+                  <h4 class="price">Rp. 3.000</h4>
                 </div>
-                            </div>
-                            <div class="col-md-6 all buffet">
-                <div class="single-menu">
-                  <div class="title-wrap d-flex justify-content-between">
-                    <h4>Ristretto</h4>
-                    <h4 class="price">$49</h4>
-                  </div>
-                  <p>
-                    Usage of the Internet is becoming more common due to rapid advance.
-                  </p>                  
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all minuman">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Es Teh</h4>
+                  <h4 class="price">Rp. 3.000</h4>
                 </div>
-                            </div>                            
-                        </div>
-                    </div>
-                    
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all minuman">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Es Nutrisari</h4>
+                  <h4 class="price">Rp. 4.000</h4>
                 </div>
-            </section>
-            <!-- End menu-area Area -->     
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all minuman">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Kopi</h4>
+                  <h4 class="price">Rp. 4.000</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all minuman">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Kopi Susu</h4>
+                  <h4 class="price">Rp. 5.000</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all snack">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Jamur Krispi</h4>
+                  <h4 class="price">Rp. 6.000</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all snack">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Tahu</h4>
+                  <h4 class="price">Rp. 1.500</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all snack">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Tempe</h4>
+                  <h4 class="price">Rp. 1.500</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+            <div class="col-md-6 all snack">
+              <div class="single-menu">
+                <div class="title-wrap d-flex justify-content-between">
+                  <h4>Terong Goreng</h4>
+                  <h4 class="price">Rp. 2.000</h4>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance.
+                </p>                  
+              </div>
+            </div>
+          </div>
+        </div>          
+      </div>
+      </section>
+      <!-- End menu-area Area -->     
 
       <!-- Start reservation Area -->
       <section class="reservation-area section-gap relative">
@@ -148,67 +235,6 @@
         </div>  
       </section>
       <!-- End reservation Area -->
-      
-      <!-- Start gallery-area Area -->
-            <section class="gallery-area section-gap" id="gallery">
-                <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-              <div class="title text-center">
-                <h1 class="mb-10">Food and Customer Gallery</h1>
-                <p>Who are in extremely love with eco friendly system.</p>
-              </div>
-            </div>
-          </div>  
-                    
-                    <ul class="filter-wrap filters col-lg-12 no-padding">
-                        <li class="active" data-filter="*">All Menu</li>
-                        <li data-filter=".breakfast">Breakfast</li>
-                        <li data-filter=".lunch">Lunch</li>
-                        <li data-filter=".dinner">Dinner</li>
-                        <li data-filter=".budget-meal">Budget Meal</li>
-                        <li data-filter=".buffet">Buffet</li>
-                    </ul>
-                    
-                    
-                    <div class="filters-content">
-                        <div class="row grid">
-                            <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g1.jpg" alt="">
-                              </div>                            
-                            </div>                           
-                            <div class="col-lg-4 col-md-6 col-sm-6 all dinner">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g2.jpg" alt="">
-                              </div>                            
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 all budget-meal">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g3.jpg" alt="">
-                              </div>                            
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 all breakfast">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g4.jpg" alt="">
-                              </div>                            
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 all lunch">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g5.jpg" alt="">
-                              </div>                            
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 all buffet">
-                              <div class="single-gallery">
-                                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/g6.jpg" alt="">
-                              </div>                            
-                            </div>                            
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
-            <!-- End gallery-area Area -->      
 
       <!-- Start review Area -->
       <section class="review-area section-gap">
@@ -275,81 +301,4 @@
           </div>
         </div>  
       </section>
-      <!-- End review Area -->          
-
-      <!-- Start blog Area -->
-      <section class="blog-area section-gap" id="blog">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-              <div class="title text-center">
-                <h1 class="mb-10">Latest From Our Blog</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.</p>
-              </div>
-            </div>
-          </div>          
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/b1.jpg" alt="">               
-              </div>
-              <p class="date">10 Jan 2018</p>
-              <a href="blog-single.html"><h4>Cooking Perfect Fried Rice
-              in minutes</h4></a>
-              <p>
-                inappropriate behavior ipsum dolor sit amet, consectetur.
-              </p>
-              <div class="meta-bottom d-flex justify-content-between">
-                <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-              </div>                  
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/b2.jpg" alt="">               
-              </div>
-              <p class="date">10 Jan 2018</p>
-              <a href="blog-single.html"><h4>Secret of making Heart 
-              Shaped eggs</h4></a>
-              <p>
-                inappropriate behavior ipsum dolor sit amet, consectetur.
-              </p>
-              <div class="meta-bottom d-flex justify-content-between">
-                <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-              </div>                  
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/b3.jpg" alt="">               
-              </div>
-              <p class="date">10 Jan 2018</p>
-              <a href="blog-single.html"><h4>How to check steak if 
-              it is tender or not</h4></a>
-              <p>
-                inappropriate behavior ipsum dolor sit amet, consectetur.
-              </p>
-              <div class="meta-bottom d-flex justify-content-between">
-                <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-              </div>                  
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 single-blog">
-              <div class="thumb">
-                <img class="img-fluid" src="<?php echo base_url()?>assets/home/img/b4.jpg" alt="">               
-              </div>
-              <p class="date">10 Jan 2018</p>
-              <a href="blog-single.html"><h4>Seaseme and black seed
-              Flavored Bun Rocks</h4></a>
-              <p>
-                inappropriate behavior ipsum dolor sit amet, consectetur.
-              </p>
-              <div class="meta-bottom d-flex justify-content-between">
-                <p><span class="lnr lnr-heart"></span> 15 Likes</p>
-                <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
-              </div>                  
-            </div>              
-          </div>
-        </div>  
-      </section>
-      <!-- End blog Area -->
+      <!-- End review Area -->

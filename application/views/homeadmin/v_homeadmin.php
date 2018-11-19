@@ -32,13 +32,13 @@
 
             <ul class="nav">
                 <li>
-                    <a href="<?php echo base_url('admin'); ?>">
+                    <a href="<?php echo base_url('homeadmin'); ?>">
                         <i class="fa fa-dashboard"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/transaksi'); ?>">
+                    <a href="<?php echo base_url('homeadmin/logo'); ?>">
                         <i class="fa fa-exchange"></i>
                         <p>Home Logo</p>
                     </a>

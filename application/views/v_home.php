@@ -78,12 +78,12 @@
         <div class="container">
           <div class="row fullscreen align-items-center justify-content-between">
             <div class="col-lg-12 banner-content">
-              <h6 class="text-white">Wide Options of Choice</h6>
-              <h1 class="text-white">Delicious Recipes</h1>
+              <h6 class="text-white">Berbagai macam menu di</h6>
+              <h1 class="text-white">Ayam Geprek Mamato</h1>
               <p class="text-white">
-                inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.
+                Tentunya akan memanjakan lidahmu, penggemar rasa pedas! Yuk, #salto bareng Ayam Geprek Mamato.
               </p>
-              <a href="#" class="primary-btn text-uppercase">Check Our Menu</a>
+              <a href="#" class="primary-btn text-uppercase">Cek Pilihan Menu</a>
             </div>
           </div>
         </div>          
