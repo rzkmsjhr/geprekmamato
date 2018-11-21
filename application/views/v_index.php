@@ -24,7 +24,7 @@
             <div class="menu-content pb-70 col-lg-8">
               <div class="title text-center">
                 <h1 class="mb-10">Pilihan Menu Ayam Geprek Mamato</h1>
-                <p>Berbabagai macam menu dengan harga murah dengan kualitas bahan yang baik dan juga segar</p>
+                <p>Berbabagai macam menu dengan harga yang terjangkau dengan kualitas bahan yang baik dan juga segar</p>
               </div>
             </div>
           </div>  
@@ -206,29 +206,18 @@
         <div class="container">
           <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 reservation-left">
-              <h1 class="text-white">Reserve Your Seats
-              to Confirm if You Come
-              with Your Family</h1>
+              <h1 class="text-white">Ingin pesan Ayam Geprek Mamato untuk acara spesialmu? Langsung isi form pesanan ini ya!</h1>
               <p class="text-white pt-20">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+                Dengan melakukan pesanan via website, kamu sudah bisa mendapatkan diskon 10% untuk pembelian di atas 30 porsi paket Ayam + Nasi lho, Menarik kan?
               </p>
             </div>
             <div class="col-lg-5 reservation-right">
               <form class="form-wrap text-center" action="#">
-                <input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
-                <input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
-                <input type="text" class="form-control" name="phone" placeholder="Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" >    
-                <input type="text" class="form-control date-picker" name="date" placeholder="Select Date & time" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Select Date & time'" >                 
-                <div class="form-select" id="service-select">
-                  <select>
-                    <option data-display="">Select Event</option>
-                    <option value="1">Event One</option>
-                    <option value="2">Event Two</option>
-                    <option value="3">Event Three</option>
-                    <option value="4">Event Four</option>
-                  </select>
-                </div>                  
-                <button class="primary-btn text-uppercase mt-20">Make Reservation</button>
+              <input type="text" class="form-control" name="name" placeholder="Nama" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Isi Nama Kamu'" >
+              <input type="email" class="form-control" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'" >
+              <input type="text" class="form-control" name="phone" placeholder="No. HP" onfocus="this.placeholder = ''" onblur="this.placeholder = 'No. HP'" >    
+              <input type="text" class="form-control" id="tanggal-pesan" name="date" placeholder="Tanggal Pesanan" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tanggal Pesanan'" >                 
+                <button class="primary-btn text-uppercase mt-20">Pesan Sekarang</button>
               </form>
             </div>
           </div>
@@ -239,6 +228,13 @@
       <!-- Start review Area -->
       <section class="review-area section-gap">
         <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+              <div class="title text-center">
+                <h1 class="mb-10">Review dan Testimoni</h1>
+              </div>
+            </div>
+          </div> 
           <div class="row">
             <div class="active-review-carusel">
               <div class="single-review">
