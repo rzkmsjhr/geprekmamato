@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-fill btn-success" type="submit">Submit</button>
+                <button class="btn btn-fill btn-success" type="submit" id="hide-submit-user">Submit</button>
                 <button class="btn btn-info btn-fill" type="button" name="showpassword" id="showpassword" value="Show Password">Show password</button>
                 <a class="btn btn-danger btn-fill" href="<?php echo base_url('kasir/userkasir'); ?>">Kembali</a>
             </div>

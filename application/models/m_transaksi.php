@@ -271,6 +271,7 @@ class M_transaksi extends CI_Model{
 
         $result=$this->db->insert_batch('transaksi', $dataToSave);
         return $result;
+        
     }
 
 

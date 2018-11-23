@@ -196,6 +196,15 @@
     </script>
 
     <script type="text/javascript">
+      $("#hide-submit-user").click(function () {
+      $("#hide-submit-user").hide();
+      });
+      $("#hide-submit-trnsaksi").click(function () {
+      $("#hide-submit-trnsaksi").hide();
+      });
+    </script>
+
+    <script type="text/javascript">
     $(document).ready(function(){
       $("#btn-search").click(function(){ 
         $(this).html("SEARCHING...").attr("disabled", "disabled");

@@ -78,6 +78,6 @@
 <input type="hidden" name="no_transaksi[]" class="form-control" value="<?php echo $no_transaksi ?>">
 <input type="hidden" name="no_transaksiqr" class="form-control" value="<?php echo $no_transaksi ?>">
 <?php }?>
-<button class="btn btn-fill btn-success" type="submit">Submit</button>
+<button class="btn btn-fill btn-success" type="submit" id="hide-submit-trnsaksi">Submit</button>
 <a class="btn btn-danger btn-fill" href="<?php echo base_url('kasir/add_transaksi'); ?>">Kembali</a>
 </form>

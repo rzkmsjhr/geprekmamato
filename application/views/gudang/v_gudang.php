@@ -144,6 +144,21 @@
     </script>
 
     <script type="text/javascript">
+      $("#hide-submit-user").click(function () {
+      $("#hide-submit-user").hide();
+      });
+      $("#hide-submit-item").click(function () {
+      $("#hide-submit-item").hide();
+      });
+      $("#hide-submit-item-in").click(function () {
+      $("#hide-submit-item-in").hide();
+      });
+      $("#hide-submit-item-out").click(function () {
+      $("#hide-submit-item-out").hide();
+      });
+    </script>
+
+    <script type="text/javascript">
     $(document).ready(function(){
     $('#submit-item').submit(function(e){
         e.preventDefault(); 

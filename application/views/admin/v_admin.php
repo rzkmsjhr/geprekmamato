@@ -250,6 +250,34 @@
     } );
     </script>
     <script type="text/javascript">
+      $("#hide-submit-user").click(function () {
+      $("#hide-submit-user").hide();
+      });
+      $("#hide-submit-promo").click(function () {
+      $("#hide-submit-promo").hide();
+      });
+      $("#hide-submit-item").click(function () {
+      $("#hide-submit-item").hide();
+      });
+      $("#hide-submit-trnsaksi").click(function () {
+      $("#hide-submit-trnsaksi").hide();
+      });
+      $("#hide-submit-ketegori").click(function () {
+      $("#hide-submit-ketegori").hide();
+      });
+      $("#hide-submit-menu").click(function () {
+      $("#hide-submit-menu").hide();
+      });
+      $("#hide-submit-item-in").click(function () {
+      $("#hide-submit-item-in").hide();
+      });
+      $("#hide-submit-item-out").click(function () {
+      $("#hide-submit-item-out").hide();
+      });
+    </script>
+
+
+    <script type="text/javascript">
     $(document).ready(function(){
       $("#btn-search").click(function(){ 
         $(this).html("SEARCHING...").attr("disabled", "disabled");
@@ -322,6 +350,8 @@
              });
         });
     });
+    </script>
+    <script type="text/javascript">
     </script>
     <script type="text/javascript">
     $(document).ready(function(){
@@ -458,25 +488,6 @@
                   success: function(data){
                       $("#notifitemout").fadeIn('slow');
                       setTimeout(function() { $("#notifitemout").hide(); }, 3000);
-               }
-            });
-        });
-    });
-    </script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-    $('#update-item-in').submit(function(e){
-        e.preventDefault(); 
-             $.ajax({
-                url:'<?php echo base_url();?>admin/update_item_in',
-                type:"post",
-                data:new FormData(this),
-                processData:false,
-                contentType:false,
-                cache:false,
-                async:false,
-                 success: function(data){
-                     alert("Item Masuk Sukses di Update");
                }
             });
         });

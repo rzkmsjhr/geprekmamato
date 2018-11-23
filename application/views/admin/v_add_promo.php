@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-fill btn-success" type="submit">Submit</button>
+                <button class="btn btn-fill btn-success" type="submit" id="hide-submit-promo">Submit</button>
                 <a class="btn btn-danger btn-fill" href="<?php echo base_url('admin/promo'); ?>">Kembali</a>
             </div>
             <div class="clearfix"></div>
