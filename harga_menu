@@ -1,1 +1,0 @@
-"Rp. ".$harga;$harga=number_format($row-,0,",",".");
