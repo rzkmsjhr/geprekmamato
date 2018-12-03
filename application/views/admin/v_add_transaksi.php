@@ -3,9 +3,8 @@
         <h4 class="title">Input Transaksi</h4>
     </div>
     <div class="content">
-        <form action="<?php echo base_url();?>admin/cetaknota" method="post">
-            <?php 
-            $now = new DateTime(null, new DateTimeZone('Asia/Jakarta'));?>
+        <form action="<?php echo base_url('admin/cetaknota'); ?>" method="POST">
+            <?php $now = new DateTime(null, new DateTimeZone('Asia/Jakarta'));?>
             <div class="row">
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
@@ -45,7 +44,8 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Pilih Menu</label>
-                        <select required name="id_menu_transaksi" class="form-control" id="menu">
+                        
+                        <select required name="menu_transaksi" class="form-control" id="menu">
                         <option value="">- Pilih Menu -</option>
                         <option disabled>──────────</option>
                         <option disabled>- MAKANAN -</option>
@@ -101,7 +101,7 @@
                     <div class="col-md-3 px-1">
                         <div class="form-group">
                             <label>Jumlah</label>
-                            <input name="quantity[]" type="text" class="form-control" placeholder="Jumlah" value="" required>
+                            <input name="quantity[]" type="number" class="form-control" placeholder="Jumlah" value="" required>
                         </div>
                     </div>
                     <div class="col-md-2 pl-1">
@@ -120,7 +120,7 @@
                         <option value="">- Pilih Promo -</option>
                         <?php 
                             foreach($promo as $row)
-                            { 
+                            {
                                 echo '<option value="'.$row->id_promo.'">'.$row->nama_promo.'</option>';
                             }
                         ?>
@@ -128,8 +128,7 @@
                     </div>
                 </div>
                 </div>
-            <div class="form-group"> 
-                
+            <div class="form-group">
                 <button class="btn btn-fill btn-success" type="submit">Checkout</button>
                 <a class="btn btn-danger btn-fill" href="<?php echo base_url('admin/transaksi'); ?>">Kembali</a>
             </div>

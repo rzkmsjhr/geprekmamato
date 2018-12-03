@@ -262,9 +262,7 @@
       $("#hide-submit-trnsaksi").click(function () {
       $("#hide-submit-trnsaksi").hide();
       });
-      $("#hide-submit-ketegori").click(function () {
-      $("#hide-submit-ketegori").hide();
-      });
+      
       $("#hide-submit-menu").click(function () {
       $("#hide-submit-menu").hide();
       });
@@ -334,18 +332,28 @@
     <script type="text/javascript">
     $(document).ready(function(){
     $('#submit-kategori').submit(function(e){
-        e.preventDefault(); 
+        e.preventDefault();
              $.ajax({
                  url:'<?php echo base_url();?>admin/save_kategori',
                  type:"post",
+                 dataType: "json",
                  data:new FormData(this),
                  processData:false,
                  contentType:false,
                  cache:false,
                  async:false,
                   success: function(data){
+                    if($.isEmptyObject(data.error)) {
+                      $("#errorkategori").fadeOut('fast');
                       $("#notifkategori").fadeIn('slow');
+                      $("#notifkategori").html(data.success);;
+                      $("#hide-submit-ketegori").hide();
                       setTimeout(function() { $("#notifkategori").hide(); }, 3000);
+                    }
+                    else {
+                      $("#errorkategori").fadeIn('slow');
+                      $("#errorkategori").html(data.error);
+                    }  
                }
              });
         });

@@ -150,7 +150,7 @@ class Admin extends CI_Controller {
 
     function delete_transaksi() {
     	$id = $this->input->post('no_transaksi');
-    	for ($i = 0; $i < sizeof($id); $i++) {
+    	for ($i = 0; $i < count($id); $i++) {
         	print_r($id[$i]);
         	$where = "no_transaksi = '$id[$i]'";
         	unlink("assets/qrtrans/".$id[$i].".png");
@@ -228,10 +228,29 @@ class Admin extends CI_Controller {
 	}
 
 	function save_kategori() {
-        $nama_kategori= $this->input->post('nama_kategori');
-        $result= $this->m_kategori->insert($nama_kategori);
-        echo json_decode($result);
+		$this->form_validation->set_rules('nama_kategori', 'Nama Kategori', 'required|min_length[2]|callback_alpha_dash_space');
+
+        if ($this->form_validation->run() == FALSE) {
+            $errors = validation_errors();
+            echo json_encode(['error'=>$errors]);
+        }
+        else {
+        	$nama_kategori= $this->input->post('nama_kategori');
+        	$this->m_kategori->insert($nama_kategori);
+        	echo json_encode(['success'=>'<span><b>Kategori Menu Berhasil Disimpan</span>']);
+        }
+        
     }
+
+    function alpha_dash_space($nama) {
+    	if (! preg_match('/^[a-zA-Z\s]+$/', $nama)) {
+    	    $this->form_validation->set_message('alpha_dash_space', 'The %s field may only contain alpha characters & White spaces');
+    	    return FALSE;
+    	}
+    	else {
+    	    return TRUE;
+    	}
+	}
 
     function edit_kategori($id) {
 		$where = array('id_kategori' => $id);
