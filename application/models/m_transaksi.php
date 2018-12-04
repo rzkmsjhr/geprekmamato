@@ -274,11 +274,6 @@ class M_transaksi extends CI_Model{
         
     }
 
-
-    function edit_data($where,$table) {
-        return $this->db->get_where($table,$where);
-    }
-
     function detail_transaksi($id) {
 
         $sql = $this->db->query("SELECT DISTINCT t.tanggal_transaksi, t.waktu_transaksi, t.no_transaksi, t.nama_customer, u.username, p.nama_promo FROM transaksi t JOIN user u ON t.id_user_transaksi = u.id_user JOIN promo p ON t.id_promo_transaksi = p.id_promo WHERE t.no_transaksi = '$id'");
@@ -289,12 +284,6 @@ class M_transaksi extends CI_Model{
 
         $sql = $this->db->query("SELECT t.no_transaksi, m.harga_menu, m.nama_menu, t.quantity, t.total_bayar, p.nilai_promo FROM transaksi t JOIN menu m ON t.id_menu_transaksi = m.id_menu JOIN promo p ON t.id_promo_transaksi = p.id_promo WHERE t.no_transaksi = '$id'");
         return $sql->result();
-    }
-
-    function update($where,$data,$table) {
-        $this->db->where($where);
-        $result= $this->db->update($table,$data);
-        return $result;
     }
 
     function delete($where,$table) {

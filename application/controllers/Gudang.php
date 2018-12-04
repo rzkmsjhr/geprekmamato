@@ -34,14 +34,14 @@ class Gudang extends CI_Controller {
 	}
 
 	function save_item_gudang() {
-        $kode_item1= $this->input->post('kode_item1');
-        $kode_item2= $this->input->post('kode_item2');
-        $kode_item = $kode_item1."".$kode_item2;
-        $nama_item= $this->input->post('nama_item');
-        $satuan= $this->input->post('satuan');
-        $stok= $this->input->post('stok');
-        $result= $this->m_gudang->insert($kode_item,$nama_item,$satuan,$stok);
-        echo json_decode($result);
+		$kode_item1= $this->input->post('kode_item1');
+		$kode_item2= $this->input->post('kode_item2');
+		$kode_item = $kode_item1."".$kode_item2;
+		$nama_item= $this->input->post('nama_item');
+		$satuan= $this->input->post('satuan');
+		$stok= $this->input->post('stok');
+		$result= $this->m_gudang->insert($kode_item,$nama_item,$satuan,$stok);
+		echo json_decode($result);
     }
 
     function edit_item_gudang($id) {
@@ -100,13 +100,6 @@ class Gudang extends CI_Controller {
 		$data['bahanmasak'] = $this->m_gudang->get_bahan_masakan_out();
 		$this->template->load('gudang/v_gudang', 'gudang/v_bahan_masak_out', $data);
 	}
-
-	/*function edit_bahanmasak_in($id) {
-		$where = array('id_item_in' => $id);
-		$data['gudang_in'] = $this->m_gudang_in->edit_data($where,'gudang_in')->result();
-		$data['bahanmasak'] = $this->m_gudang->get_bahan_masakan();
-		$this->template->load('v_admin', 'v_edit_bahanmasak_in', $data);
-	}*/
 
 	function inventori_in() {
 		$data['inventori'] = $this->m_gudang->get_inventori();

@@ -9,7 +9,7 @@
                 <div class="col-md-4 pr-1">
                     <div class="form-group">
                         <label>Tanggal Transaksi</label>
-                        <input name="tanggal_transaksi" readonly="readonly" type="text" class="form-control" value="<?php echo $now->format('Y-m-d'); ?>">
+                        <input name="tanggal_transaksi" id="tanggal-beli" type="text" class="form-control" value="<?php echo $now->format('Y-m-d'); ?>">
                     </div>
                 </div>
                 <div class="col-md-4 px-1">

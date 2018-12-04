@@ -360,13 +360,6 @@ class Admin extends CI_Controller {
 		$this->template->load('admin/v_admin', 'admin/v_bahan_masak_out', $data);
 	}
 
-	/*function edit_bahanmasak_in($id) {
-		$where = array('id_item_in' => $id);
-		$data['gudang_in'] = $this->m_gudang_in->edit_data($where,'gudang_in')->result();
-		$data['bahanmasak'] = $this->m_gudang->get_bahan_masakan();
-		$this->template->load('v_admin', 'v_edit_bahanmasak_in', $data);
-	}*/
-
 	function inventori_in() {
 		$data['inventori'] = $this->m_gudang->get_inventori();
 		$this->template->load('admin/v_admin', 'admin/v_inventori_in', $data);
@@ -419,27 +412,6 @@ class Admin extends CI_Controller {
 		$this->m_gudang_out->delete($where,'gudang_out');
 		redirect('admin/inventori');
 	}
-
-    /*function update_item_in() {
-        $id_item_in= $this->input->post('id_item_in');
-        $kode_item= $this->input->post('kode_item');
-    	$tanggal_beli= $this->input->post('tanggal_beli');
-    	$harga_beli= $this->input->post('harga_beli');
-    	$jumlah= $this->input->post('jumlah');
-    	$keterangan= $this->input->post('keterangan');
-		$data = array(
-			'kode_item' => $kode_item,
-			'tanggal_beli' => $tanggal_beli,
-			'harga_beli' => $harga_beli,
-			'jumlah' => $jumlah,
-			'keterangan' => $keterangan
-		);
-		$where = array(
-			'id_item_in' => $id_item_in
-		);
-		$result= $this->m_gudang_in->update($where,$data,'gudang_in');
-		echo json_decode($result);
-	}*/
 
 	/* Akhir Proses Gudang Bahan Masakan & Inventori*/
 

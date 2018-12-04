@@ -14,13 +14,12 @@
 
   </div>
   <div class="content table-responsive table-full-width">
-      <table class="table table-hover table-striped">
+      <table class="table table-hover table-striped" id="tblinvois">
           <thead>
               <th>Nama Menu</th>
               <th>Harga</th>
               <th>Quantity</th>
               <th>Subtotal</th>
-          </thead>
           <tbody>
               <?php 
               $iterator = new MultipleIterator();
@@ -42,6 +41,7 @@
                       <td><?php echo $current[0]; ?></td>
                       <td><?php echo $current[2]; ?></td>
                       <td><?php echo "$subtotal"; ?></td>
+                      <!--<td><button class="btn btn-fill btn-danger btnRemove">Remove</button></td>-->
               <?php }?>
                 <tr>
                   <td></td>

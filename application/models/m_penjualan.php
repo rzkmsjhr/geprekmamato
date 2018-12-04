@@ -8,7 +8,7 @@ class M_penjualan extends CI_Model{
         
         $config['base_url'] = base_url('admin/penjualan');
         $config['total_rows'] = $this->db->query($query)->num_rows();
-        $config['per_page'] = 7;
+        $config['per_page'] = 5;
         $config['uri_segment'] = 3;
         $config['num_links'] = 3;
         

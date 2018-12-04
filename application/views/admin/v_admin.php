@@ -151,6 +151,14 @@
     <script src="<?php echo base_url();?>/assets/cpanel/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
     <script src="<?php echo base_url();?>/assets/cpanel/js/demo.js"></script>
 
+    <!--<script type="text/javascript">
+      $(document).ready(function(){
+       $("#tblinvois").on('click','.btnRemove',function(){
+             $(this).closest('tr').remove();
+           });
+      });
+    </script>-->
+
     <script type="text/javascript">
         function printDiv(print) {
         var printContents = document.getElementById(print).innerHTML;
@@ -262,7 +270,6 @@
       $("#hide-submit-trnsaksi").click(function () {
       $("#hide-submit-trnsaksi").hide();
       });
-      
       $("#hide-submit-menu").click(function () {
       $("#hide-submit-menu").hide();
       });
@@ -273,7 +280,6 @@
       $("#hide-submit-item-out").hide();
       });
     </script>
-
 
     <script type="text/javascript">
     $(document).ready(function(){
@@ -394,8 +400,8 @@
                  cache:false,
                  async:false,
                   success: function(data){
-                      $("#notifmenu").fadeIn('slow');
-                      setTimeout(function() { $("#notifmenu").hide(); }, 3000);
+                    $("#notifmenu").fadeIn('slow');
+                    setTimeout(function() { $("#notifmenu").hide(); }, 3000);
                }
              });
         });

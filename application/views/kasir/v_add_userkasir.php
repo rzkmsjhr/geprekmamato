@@ -17,7 +17,6 @@
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Password" id="password" required minlength="6">
-                        
                     </div>
                 </div>
             </div>
